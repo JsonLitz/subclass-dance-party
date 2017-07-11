@@ -71,7 +71,20 @@ body, a:link, a:visited, a:active{
 	top:1px;
 }
 
-#steve {
-  height: 24%;
-  width: 16%;
+.shrink {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+
+  -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
+    transition: width 1s, height 1s, background-color 1s, transform 1s;
+}
+.shrink:hover {
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+div.image {
 }
