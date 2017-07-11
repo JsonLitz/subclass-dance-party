@@ -16,18 +16,29 @@ $(document).ready(function() {
      * to the stage.
      */
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-
+    // console.log(dancerMakerFunctionName);
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
+    //how can we access classes from the window object using the classname
+    // console.log(window)
+    // console.log(dancerMakerFunction);
     // make a dancer with a random position
-
-    var dancer = dancerMakerFunction(
+    console.log(window)
+    var dancer =  dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    // var chubbyDancer =
+
   });
 });
+var makeBlinkyDancer = (top, left, timeBetweenSteps) => {
+  return new BlinkyDancer(top, left, timeBetweenSteps)
+};
 
+var makeChubbyDancer = (top, left, timeBetweenSteps) => {
+  return new ChubbyDancer(top, left, timeBetweenSteps)
+}
