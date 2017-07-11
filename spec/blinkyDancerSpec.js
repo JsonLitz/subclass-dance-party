@@ -13,11 +13,14 @@ describe('blinkyDancer', function() {
   });
 
   it('should have a step function that makes its node blink', function() {
-    sinon.spy(blinkyDancer.$node, 'toggle');
+    sinon.spy(blinkyDancer.$node, 'toggle');//????????????
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
 
+  it('should have a function that creates a chubbyDancer', function() {
+    expect(chubbyDancer.$node.toggle.called)to.be.true;
+  })
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(blinkyDancer, 'step');
