@@ -14,6 +14,10 @@ class Dancer {
       this.$node.animate({left:'55%', top:'50%', height : '350px', width : '350px'}, 500);
     }
   }
+  stepBack() {
+    let leftValue = (window.rightHalf.includes(this)) ? '90%' : '5%';
+    this.$node.animate({left:leftValue, height:'150px', width:'150px'}, 1250);
+  }
   step(timeBetweenSteps) {
     setTimeout(()=>{
       this.step(timeBetweenSteps);
