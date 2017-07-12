@@ -22,14 +22,17 @@ $(document).ready(function() {
     window.rightHalf = window.dancers.slice(midPoint)
     window.leftHalf = window.dancers.slice(0, midPoint)
     window.dancers.forEach((item, index)=>{
-      let styleProperties = (index%2===0) ? {left : '90%'} : {left : '5%'};
-      item.$node.animate(styleProperties, 1250);
+      item.stepBack();
+      // item.$node.animate(styleProperties, 1250);
     })
   })
 
   $('.danceOff').on('click', function(event) {
-    console.log(window.dancers[1].$node.css("left"))
-    window.dancers[1].stepCenter()
+    // let randomIndex = Math.floor(window.rightHalf.length-1 * Math.random())-1;
+    window.rightHalf[Math.floor(window.rightHalf.length-1 * Math.random())-1].stepCenter();
+    window.leftHalf[Math.floor(window.rightHalf.length-1 * Math.random())-1].stepCenter();
+
+
   });
 
 });
