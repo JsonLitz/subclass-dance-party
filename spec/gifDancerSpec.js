@@ -12,15 +12,12 @@ describe('gifDancer', function() {
     expect(gifDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(gifDancer.$node, 'toggle');
-    gifDancer.step();
-    expect(gifDancer.$node.toggle.called).to.be.true;
-  });
-
-  it('should have a function that creates a chubbyDancer', function() {
-    expect(gifDancer.$node.toggle.called)to.be.true;
-  })
+  // it('should have a step function that makes its node blink', function() {
+  //   sinon.spy(gifDancer.$node, 'toggle');
+  //   gifDancer.step();
+  //   expect(gifDancer.$node.toggle.called).to.be.true;
+  // });
+  //
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(gifDancer, 'step');
