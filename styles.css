@@ -1,6 +1,6 @@
 body, html{
   height:100%;
-  background-image: url("https://ak9.picdn.net/shutterstock/videos/10346246/thumb/1.jpg?i10c=img.resize(height:160)");
+  background-image: url("https://i.ytimg.com/vi/rJzUDKyq12M/maxresdefault.jpg");
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -72,8 +72,8 @@ body, a:link, a:visited, a:active{
 }
 
 .shrink {
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   position: absolute;
 
   -webkit-transition: width 1s, height 1s, background-color 1s, -webkit-transform 1s;
